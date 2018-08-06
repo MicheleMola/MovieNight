@@ -31,7 +31,7 @@ class GenresListDataSource: NSObject, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return "Choose Max 5 items"
+    return "Choose Max 5 Genres"
   }
   
   func update(with genres: [Genre]) {

@@ -17,7 +17,7 @@ class PeopleTableViewController: UITableViewController {
   private let limit = 5
   
   lazy var dataSource: PeopleListDataSource = {
-    return PeopleListDataSource(people: [])
+    return PeopleListDataSource(people: [], tableView: self.tableView)
   }()
   
   var people: [Person] = [] {
@@ -39,8 +39,6 @@ class PeopleTableViewController: UITableViewController {
     super.viewDidLoad()
     
     tableView.dataSource = dataSource
-    
-    print(watcher)
     
     getPeople(fromPage: 1)
   }

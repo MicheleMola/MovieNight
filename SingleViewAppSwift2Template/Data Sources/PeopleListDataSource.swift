@@ -12,8 +12,12 @@ class PeopleListDataSource: NSObject, UITableViewDataSource {
   
   private var people: [Person]
   
-  init(people: [Person]) {
+  let tableView: UITableView
+  
+  init(people: [Person], tableView: UITableView) {
     self.people = people
+    self.tableView = tableView
+    super.init()
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,13 +29,15 @@ class PeopleListDataSource: NSObject, UITableViewDataSource {
     
     let person = people[indexPath.row]
     
-    personCell.configure(with: person)
+    let personViewModel = PersonViewModel(person: person)
+    
+    personCell.configure(with: personViewModel)
     
     return personCell
   }
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return "Choose Max 5 items"
+    return "Choose Max 5 People"
   }
   
   func update(with people: [Person]) {
@@ -41,5 +47,5 @@ class PeopleListDataSource: NSObject, UITableViewDataSource {
   func person(at indexPath: IndexPath) -> Person {
     return people[indexPath.row]
   }
-
+  
 }

@@ -33,6 +33,7 @@ extension Endpoint {
 enum MovieDB {
   case genresList(apiKey: String)
   case popularPeople(apiKey: String, page: Int)
+  case moviesList(apiKey: String, page: String, genres: String, people: String, AVGVote: String)
 }
 
 extension MovieDB: Endpoint {
@@ -44,6 +45,7 @@ extension MovieDB: Endpoint {
     switch self {
     case .genresList: return "/3/genre/movie/list"
     case .popularPeople: return "/3/person/popular"
+    case .moviesList: return "/3/discover/movie"
     }
   }
   
@@ -57,6 +59,14 @@ extension MovieDB: Endpoint {
       return [
         URLQueryItem(name: "api_key", value: apiKey),
         URLQueryItem(name: "page", value: "\(page)")
+      ]
+    case .moviesList(let apiKey, let page, let genres, let people, let AVGVote):
+      return [
+        URLQueryItem(name: "api_key", value: apiKey),
+        URLQueryItem(name: "page", value: page),
+        URLQueryItem(name: "with_genres", value: genres),
+        URLQueryItem(name: "with_people", value: people),
+        URLQueryItem(name: "vote_average.gte", value: AVGVote)
       ]
     }
   }

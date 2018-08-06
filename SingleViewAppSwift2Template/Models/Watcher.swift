@@ -12,4 +12,5 @@ struct Watcher: Codable {
   let identifier: Int
   var genres: [Genre] = []
   var people: [Person] = []
+  var avgVoteGTE: Double = 1.0
 }

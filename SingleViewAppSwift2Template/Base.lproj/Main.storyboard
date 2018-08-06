@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="home" id="BYZ-38-t0r" customClass="ViewController" customModule="SingleViewAppSwift2Template" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,6 +34,7 @@
                                 </state>
                                 <connections>
                                     <action selector="resultsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDe-ub-XdR"/>
+                                    <segue destination="Gyn-Rl-V82" kind="show" id="nVZ-lY-uFO"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="E2u-Fv-V6Z">
@@ -118,7 +119,7 @@
                             <constraint firstItem="5TS-ST-1LS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xdE-VA-9VE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hdo-yV-uO7">
+                    <navigationItem key="navigationItem" title="Home" id="hdo-yV-uO7">
                         <barButtonItem key="rightBarButtonItem" title="Clear" id="pyp-5G-H55">
                             <connections>
                                 <action selector="clearTapped:" destination="BYZ-38-t0r" id="nJb-nc-JcH"/>
@@ -180,12 +181,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Genres" id="2Nn-RP-f5K">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="me5-id-8fR">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="TfY-jN-Z3X" kind="show" id="y17-Sa-qpm"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Next" id="fu5-nm-VLj">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -197,6 +192,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cQ-5e-3CJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1964" y="33.733133433283363"/>
+        </scene>
+        <!--Movies-->
+        <scene sceneID="3ie-ca-7Bb">
+            <objects>
+                <tableViewController id="Gyn-Rl-V82" customClass="MoviesTableViewController" customModule="SingleViewAppSwift2Template" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1zk-Gx-XNF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="60" id="Bq0-2I-4Fa" customClass="MovieCell" customModule="SingleViewAppSwift2Template" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bq0-2I-4Fa" id="qd7-6M-DYl">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gyn-Rl-V82" id="nK5-xk-Pi9"/>
+                            <outlet property="delegate" destination="Gyn-Rl-V82" id="6vz-Qy-aLs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Movies" id="2hj-0g-FJu">
+                        <barButtonItem key="backBarButtonItem" title="Home" id="cmh-QO-y3p"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9M9-mh-0OG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="765"/>
         </scene>
         <!--People-->
         <scene sceneID="dhw-LQ-P4b">
@@ -423,6 +449,7 @@
                         <outlet property="genresResume" destination="146-V6-jl2" id="qeV-or-T9F"/>
                         <outlet property="peopleResume" destination="XWx-9R-MZu" id="Z5Y-o1-LFy"/>
                         <outlet property="saveButton" destination="7G9-QL-tpb" id="FZs-IP-XQc"/>
+                        <outlet property="stepper" destination="hRN-am-c4r" id="P4p-UW-ScZ"/>
                         <outlet property="voteLabel" destination="bQf-lU-bK2" id="cOg-bv-ckY"/>
                     </connections>
                 </tableViewController>

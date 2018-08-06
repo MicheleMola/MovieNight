@@ -29,7 +29,7 @@ class ViewController: UIViewController {
       if let genresTVC = segue.destination as? GenresTableViewController {
         guard let tag = sender as? Int else { return }
         
-        let watcher = Watcher(identifier: tag, genres: [], people: [])
+        let watcher = Watcher(identifier: tag, genres: [], people: [], avgVoteGTE: 1.0)
         genresTVC.watcher = watcher
       }
     }

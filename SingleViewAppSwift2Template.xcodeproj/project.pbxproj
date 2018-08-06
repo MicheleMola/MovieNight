@@ -17,6 +17,11 @@
 		DE6FC949210B3AEC00E0E79F /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6FC948210B3AEC00E0E79F /* Button.swift */; };
 		DE701EB92112F1960076B354 /* Watcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE701EB82112F1960076B354 /* Watcher.swift */; };
 		DE701EBB211302C40076B354 /* VoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE701EBA211302C40076B354 /* VoteTableViewController.swift */; };
+		DEA849222115ACB700722E20 /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA849212115ACB700722E20 /* PersonViewModel.swift */; };
+		DEA849242115EA2F00722E20 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA849232115EA2F00722E20 /* Movie.swift */; };
+		DEA849262115F96300722E20 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA849252115F96300722E20 /* MoviesTableViewController.swift */; };
+		DEA849282115F99100722E20 /* MoviesListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA849272115F99100722E20 /* MoviesListDataSource.swift */; };
+		DEA8492A2115FAB500722E20 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA849292115FAB500722E20 /* MovieCell.swift */; };
 		DECA6B72210CC09200A9540D /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA6B71210CC09200A9540D /* PeopleTableViewController.swift */; };
 		DECA6B74210CC6BD00A9540D /* PeopleListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA6B73210CC6BD00A9540D /* PeopleListDataSource.swift */; };
 		DECA6B76210CC91700A9540D /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECA6B75210CC91700A9540D /* Person.swift */; };
@@ -67,6 +72,11 @@
 		DE6FC948210B3AEC00E0E79F /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		DE701EB82112F1960076B354 /* Watcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watcher.swift; sourceTree = "<group>"; };
 		DE701EBA211302C40076B354 /* VoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTableViewController.swift; sourceTree = "<group>"; };
+		DEA849212115ACB700722E20 /* PersonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
+		DEA849232115EA2F00722E20 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		DEA849252115F96300722E20 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		DEA849272115F99100722E20 /* MoviesListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListDataSource.swift; sourceTree = "<group>"; };
+		DEA849292115FAB500722E20 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		DECA6B71210CC09200A9540D /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		DECA6B73210CC6BD00A9540D /* PeopleListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleListDataSource.swift; sourceTree = "<group>"; };
 		DECA6B75210CC91700A9540D /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -180,6 +190,7 @@
 				DEDFDD65210C62B40016B7D3 /* GenresTableViewController.swift */,
 				DECA6B71210CC09200A9540D /* PeopleTableViewController.swift */,
 				DE701EBA211302C40076B354 /* VoteTableViewController.swift */,
+				DEA849252115F96300722E20 /* MoviesTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -191,6 +202,7 @@
 				DEDFDD69210C676A0016B7D3 /* Genre.swift */,
 				DECA6B75210CC91700A9540D /* Person.swift */,
 				DE701EB82112F1960076B354 /* Watcher.swift */,
+				DEA849232115EA2F00722E20 /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +212,7 @@
 			children = (
 				DEDFDD6C210C68B50016B7D3 /* GenresListDataSource.swift */,
 				DECA6B73210CC6BD00A9540D /* PeopleListDataSource.swift */,
+				DEA849272115F99100722E20 /* MoviesListDataSource.swift */,
 			);
 			path = "Data Sources";
 			sourceTree = "<group>";
@@ -209,6 +222,7 @@
 			children = (
 				DEDFDD6F210C69AF0016B7D3 /* GenreCell.swift */,
 				DECA6B77210CCA8600A9540D /* PersonCell.swift */,
+				DEA849292115FAB500722E20 /* MovieCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -217,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				DEDFDD72210C6CD80016B7D3 /* GenreCellViewModel.swift */,
+				DEA849212115ACB700722E20 /* PersonViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -372,14 +387,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA8492A2115FAB500722E20 /* MovieCell.swift in Sources */,
 				DE701EB92112F1960076B354 /* Watcher.swift in Sources */,
 				DE701EBB211302C40076B354 /* VoteTableViewController.swift in Sources */,
 				DEDFDD73210C6CD80016B7D3 /* GenreCellViewModel.swift in Sources */,
+				DEA849242115EA2F00722E20 /* Movie.swift in Sources */,
+				DEA849222115ACB700722E20 /* PersonViewModel.swift in Sources */,
 				DEDFDD76210C757E0016B7D3 /* Endpoint.swift in Sources */,
 				DEDFDD6D210C68B50016B7D3 /* GenresListDataSource.swift in Sources */,
 				8DC3C5B21D901AB50012AFF7 /* ViewController.swift in Sources */,
 				DEDFDD70210C69AF0016B7D3 /* GenreCell.swift in Sources */,
 				DEDFDD7D210C8D3C0016B7D3 /* APIError.swift in Sources */,
+				DEA849262115F96300722E20 /* MoviesTableViewController.swift in Sources */,
 				DEDFDD7B210C8D200016B7D3 /* APIClient.swift in Sources */,
 				DECA6B76210CC91700A9540D /* Person.swift in Sources */,
 				DEDFDD7F210C8DAD0016B7D3 /* MovieDBAPIClient.swift in Sources */,
@@ -391,6 +410,7 @@
 				8DC3C5B01D901AB50012AFF7 /* AppDelegate.swift in Sources */,
 				DECA6B72210CC09200A9540D /* PeopleTableViewController.swift in Sources */,
 				DEDFDD6A210C676A0016B7D3 /* Genre.swift in Sources */,
+				DEA849282115F99100722E20 /* MoviesListDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

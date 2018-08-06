@@ -41,5 +41,14 @@ class MovieDBAPIClient: APIClient {
     }, completion: completion)
   }
   
-  
+  typealias MoviesListCompletionHandler = (Response<Movies?, APIError>) -> Void
+  func getMovies(fromPage page: Int, peopleIds: String, genresIds: String, avgVote: String, completion: @escaping MoviesListCompletionHandler) {
+    let request = MovieDB.moviesList(apiKey: apiKey, page: "\(page)", genres: genresIds, people: peopleIds, AVGVote: avgVote).request
+    
+    fetch(with: request, decode: { json -> Movies? in
+      guard let movies = json as? Movies else { return nil }
+      return movies
+    }, completion: completion)
+  }
+
 }

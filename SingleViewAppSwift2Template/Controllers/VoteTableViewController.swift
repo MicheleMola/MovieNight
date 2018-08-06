@@ -18,6 +18,8 @@ class VoteTableViewController: UITableViewController {
   
   @IBOutlet weak var saveButton: UIButton!
   
+  @IBOutlet weak var stepper: UIStepper!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -47,7 +49,8 @@ class VoteTableViewController: UITableViewController {
   }
   
   @IBAction func saveTapped(_ sender: UIButton) {
-    if let watcher = watcher {
+    if var watcher = watcher {
+      watcher.avgVoteGTE = stepper.value
       let encoder = JSONEncoder()
       if let encoded = try? encoder.encode(watcher) {
         let defaults = UserDefaults.standard

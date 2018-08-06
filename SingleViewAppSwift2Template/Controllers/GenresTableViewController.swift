@@ -37,9 +37,7 @@ class GenresTableViewController: UITableViewController {
     super.viewDidLoad()
     
     tableView.dataSource = dataSource
-    
-    print(watcher)
-    
+        
     getGenres()
   }
   

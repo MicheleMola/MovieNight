@@ -34,7 +34,7 @@ class PersonCell: UITableViewCell {
     self.accessoryType = selected ? .checkmark : .none
   }
   
-  func configure(with person: Person) {
+  func configure(with person: PersonViewModel) {
     titleLabel.text = person.name
   }
   
