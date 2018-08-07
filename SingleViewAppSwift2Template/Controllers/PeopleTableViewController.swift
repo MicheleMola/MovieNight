@@ -11,7 +11,7 @@ import UIKit
 class PeopleTableViewController: UITableViewController {
   
   private struct Constants {
-    static let PersonCellHeight: CGFloat = 60
+    static let PersonCellHeight: CGFloat = 80
   }
   
   private let limit = 5
@@ -99,6 +99,10 @@ class PeopleTableViewController: UITableViewController {
         self.getPeople(fromPage: page)
       }
     }
+  }
+  
+  override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    cell.imageView?.kf.cancelDownloadTask()
   }
   
 }

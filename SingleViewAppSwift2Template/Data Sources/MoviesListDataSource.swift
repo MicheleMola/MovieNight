@@ -25,7 +25,7 @@ class MoviesListDataSource: NSObject, UITableViewDataSource {
 
     let movie = movies[indexPath.row]
     
-    movieCell.textLabel?.text = movie.title
+    movieCell.configure(movie: movie)
     
     return movieCell
   }

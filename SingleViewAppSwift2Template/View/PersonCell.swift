@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PersonCell: UITableViewCell {
   
   static let reuseIdentifier = "PersonCell"
   
-  @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var imageProfile: UIImageView!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -34,8 +36,12 @@ class PersonCell: UITableViewCell {
     self.accessoryType = selected ? .checkmark : .none
   }
   
-  func configure(with person: PersonViewModel) {
-    titleLabel.text = person.name
+  func configure(with person: Person) {
+    self.nameLabel.text = person.name
+  
+    guard let profilePath = person.profile_path else { return }
+    let url = URL(string: "https://image.tmdb.org/t/p/w200/\(profilePath)")
+    self.imageProfile.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "Fill 27"))
   }
   
 }

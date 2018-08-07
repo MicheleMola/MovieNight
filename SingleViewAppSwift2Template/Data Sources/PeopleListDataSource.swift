@@ -29,9 +29,7 @@ class PeopleListDataSource: NSObject, UITableViewDataSource {
     
     let person = people[indexPath.row]
     
-    let personViewModel = PersonViewModel(person: person)
-    
-    personCell.configure(with: personViewModel)
+    personCell.configure(with: person)
     
     return personCell
   }

@@ -11,7 +11,7 @@ import UIKit
 struct Person: Codable {
   let id: Int
   let name: String
-  let profile_path: String
+  let profile_path: String?
 }
 
 extension Person: Equatable {

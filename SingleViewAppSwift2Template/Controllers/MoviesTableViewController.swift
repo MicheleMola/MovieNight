@@ -11,7 +11,7 @@ import UIKit
 class MoviesTableViewController: UITableViewController {
   
   private struct Constants {
-    static let MovieCellHeight: CGFloat = 60
+    static let MovieCellHeight: CGFloat = 80
   }
   
   private let limit = 5
