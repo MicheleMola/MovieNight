@@ -15,6 +15,7 @@ class MovieCell: UITableViewCell {
   
   @IBOutlet weak var posterImageView: UIImageView!
   @IBOutlet weak var titleLabel: UILabel!
+  @IBOutlet weak var releaseDate: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -30,6 +31,9 @@ class MovieCell: UITableViewCell {
   func configure(movie: Movie) {
     
     self.titleLabel.text = movie.title
+    
+    let releaseDate = movie.release_date.isEmpty ? "Unknown" : movie.release_date
+    self.releaseDate.text = "Date: \(releaseDate)"
     
     guard let posterPath = movie.poster_path else { return }
     let url = URL(string: "https://image.tmdb.org/t/p/w200/\(posterPath)")

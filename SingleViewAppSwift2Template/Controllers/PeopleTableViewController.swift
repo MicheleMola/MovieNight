@@ -101,8 +101,4 @@ class PeopleTableViewController: UITableViewController {
     }
   }
   
-  override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-    cell.imageView?.kf.cancelDownloadTask()
-  }
-  
 }

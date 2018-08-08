@@ -80,9 +80,5 @@ class ViewController: UIViewController {
     resultsButton.isEnabled = false
   }
   
-  
-  @IBAction func resultsTapped(_ sender: UIButton) {
-    print("tapped")
-  }
 }
 

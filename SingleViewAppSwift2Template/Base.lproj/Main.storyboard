@@ -33,7 +33,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="resultsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mDe-ub-XdR"/>
                                     <segue destination="Gyn-Rl-V82" kind="show" id="nVZ-lY-uFO"/>
                                 </connections>
                             </button>
@@ -218,13 +217,21 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smI-GL-MjW">
-                                            <rect key="frame" x="94" y="29" width="265" height="22"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <rect key="frame" x="94" y="31.5" width="265" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQd-jy-bQy">
+                                            <rect key="frame" x="328" y="1" width="31" height="14.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="WQd-jy-bQy" secondAttribute="trailing" constant="16" id="1fv-Ek-ClX"/>
+                                        <constraint firstItem="WQd-jy-bQy" firstAttribute="top" secondItem="qd7-6M-DYl" secondAttribute="top" constant="1" id="82l-fr-qII"/>
                                         <constraint firstItem="HqF-wY-CUj" firstAttribute="centerY" secondItem="qd7-6M-DYl" secondAttribute="centerY" id="GHU-73-xGl"/>
                                         <constraint firstAttribute="trailing" secondItem="smI-GL-MjW" secondAttribute="trailing" constant="16" id="RXx-FI-GIx"/>
                                         <constraint firstItem="HqF-wY-CUj" firstAttribute="leading" secondItem="qd7-6M-DYl" secondAttribute="leading" constant="16" id="bgL-oK-eZO"/>
@@ -234,6 +241,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="posterImageView" destination="HqF-wY-CUj" id="Mnp-Kw-R2w"/>
+                                    <outlet property="releaseDate" destination="WQd-jy-bQy" id="BkL-uu-6Bj"/>
                                     <outlet property="titleLabel" destination="smI-GL-MjW" id="IHG-sS-VOQ"/>
                                 </connections>
                             </tableViewCell>
