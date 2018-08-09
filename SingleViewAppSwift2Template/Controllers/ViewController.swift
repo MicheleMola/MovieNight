@@ -51,6 +51,7 @@ class ViewController: UIViewController {
     }
     
     resultsButton.isEnabled = isKeyOnePresentInUserDefaults && isKeyTwoPresentInUserDefaults
+    resultsButton.alpha = isKeyOnePresentInUserDefaults && isKeyTwoPresentInUserDefaults ? 1.0 : 0.6
   }
   
   func isKeyPresentInUserDefaults(key: String) -> Bool {
@@ -78,6 +79,7 @@ class ViewController: UIViewController {
     labelStatusTwo.text = "Tap to enter preferences"
     
     resultsButton.isEnabled = false
+    resultsButton.alpha = 0.6
   }
   
 }

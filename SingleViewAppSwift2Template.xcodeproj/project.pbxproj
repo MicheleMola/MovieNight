@@ -7,15 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		134BC1D37C4A8D36EEEF40B5 /* Pods_SingleViewAppSwift2TemplateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE6574F4EA8684C81E8B369 /* Pods_SingleViewAppSwift2TemplateUITests.framework */; };
 		4627640D5A2B837EFF0284C2 /* Pods_SingleViewAppSwift2Template.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C12625E5F1EDF5073163CF40 /* Pods_SingleViewAppSwift2Template.framework */; };
 		8DC3C5B01D901AB50012AFF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3C5AF1D901AB50012AFF7 /* AppDelegate.swift */; };
 		8DC3C5B21D901AB50012AFF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3C5B11D901AB50012AFF7 /* ViewController.swift */; };
 		8DC3C5B51D901AB50012AFF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC3C5B31D901AB50012AFF7 /* Main.storyboard */; };
 		8DC3C5B71D901AB50012AFF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DC3C5B61D901AB50012AFF7 /* Assets.xcassets */; };
 		8DC3C5BA1D901AB50012AFF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC3C5B81D901AB50012AFF7 /* LaunchScreen.storyboard */; };
-		8DC3C5C51D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3C5C41D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests.swift */; };
-		8DC3C5D01D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3C5CF1D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests.swift */; };
 		DE3B5BA6211C533F009EB158 /* MovieDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B5BA5211C533F009EB158 /* MovieDetailTableViewController.swift */; };
 		DE6FC949210B3AEC00E0E79F /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6FC948210B3AEC00E0E79F /* Button.swift */; };
 		DE701EB92112F1960076B354 /* Watcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE701EB82112F1960076B354 /* Watcher.swift */; };
@@ -38,25 +35,7 @@
 		DEDFDD7D210C8D3C0016B7D3 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFDD7C210C8D3C0016B7D3 /* APIError.swift */; };
 		DEDFDD7F210C8DAD0016B7D3 /* MovieDBAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFDD7E210C8DAD0016B7D3 /* MovieDBAPIClient.swift */; };
 		DEE095DD211C88A300ACA7DF /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE095DC211C88A300ACA7DF /* UIViewController+Alert.swift */; };
-		FEAE02DDA931522B4FA6667B /* Pods_SingleViewAppSwift2TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB540D96874A2D8BCFFF26B /* Pods_SingleViewAppSwift2TemplateTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8DC3C5C11D901AB60012AFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8DC3C5A41D901AB50012AFF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC3C5AB1D901AB50012AFF7;
-			remoteInfo = SingleViewAppSwift2Template;
-		};
-		8DC3C5CC1D901AB60012AFF7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8DC3C5A41D901AB50012AFF7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC3C5AB1D901AB50012AFF7;
-			remoteInfo = SingleViewAppSwift2Template;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		28B7BF30455FA7BCE7900FF0 /* Pods-SingleViewAppSwift2Template.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleViewAppSwift2Template.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleViewAppSwift2Template/Pods-SingleViewAppSwift2Template.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,10 +46,8 @@
 		8DC3C5B61D901AB50012AFF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DC3C5B91D901AB50012AFF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DC3C5BB1D901AB50012AFF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DC3C5C01D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleViewAppSwift2TemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC3C5C41D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppSwift2TemplateTests.swift; sourceTree = "<group>"; };
 		8DC3C5C61D901AB60012AFF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DC3C5CB1D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleViewAppSwift2TemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DC3C5CF1D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppSwift2TemplateUITests.swift; sourceTree = "<group>"; };
 		8DC3C5D11D901AB60012AFF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB540D96874A2D8BCFFF26B /* Pods_SingleViewAppSwift2TemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleViewAppSwift2TemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,22 +88,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4627640D5A2B837EFF0284C2 /* Pods_SingleViewAppSwift2Template.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8DC3C5BD1D901AB60012AFF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEAE02DDA931522B4FA6667B /* Pods_SingleViewAppSwift2TemplateTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8DC3C5C81D901AB60012AFF7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				134BC1D37C4A8D36EEEF40B5 /* Pods_SingleViewAppSwift2TemplateUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,8 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				8DC3C5AC1D901AB50012AFF7 /* SingleViewAppSwift2Template.app */,
-				8DC3C5C01D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests.xctest */,
-				8DC3C5CB1D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -318,48 +277,6 @@
 			productReference = 8DC3C5AC1D901AB50012AFF7 /* SingleViewAppSwift2Template.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8DC3C5BF1D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8DC3C5D71D901AB60012AFF7 /* Build configuration list for PBXNativeTarget "SingleViewAppSwift2TemplateTests" */;
-			buildPhases = (
-				D8A930A991ED0D8E7C5E41E5 /* [CP] Check Pods Manifest.lock */,
-				8DC3C5BC1D901AB60012AFF7 /* Sources */,
-				8DC3C5BD1D901AB60012AFF7 /* Frameworks */,
-				8DC3C5BE1D901AB60012AFF7 /* Resources */,
-				291E3F290450FA6C4ECDBD27 /* [CP] Embed Pods Frameworks */,
-				E30A8BC1BBB085C83739685A /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8DC3C5C21D901AB60012AFF7 /* PBXTargetDependency */,
-			);
-			name = SingleViewAppSwift2TemplateTests;
-			productName = SingleViewAppSwift2TemplateTests;
-			productReference = 8DC3C5C01D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		8DC3C5CA1D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8DC3C5DA1D901AB60012AFF7 /* Build configuration list for PBXNativeTarget "SingleViewAppSwift2TemplateUITests" */;
-			buildPhases = (
-				684E5AC24F0DA941550EC3DF /* [CP] Check Pods Manifest.lock */,
-				8DC3C5C71D901AB60012AFF7 /* Sources */,
-				8DC3C5C81D901AB60012AFF7 /* Frameworks */,
-				8DC3C5C91D901AB60012AFF7 /* Resources */,
-				9BA02B64B0DF67DB646E3262 /* [CP] Embed Pods Frameworks */,
-				A2DFA9550E1D1946154D1278 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8DC3C5CD1D901AB60012AFF7 /* PBXTargetDependency */,
-			);
-			name = SingleViewAppSwift2TemplateUITests;
-			productName = SingleViewAppSwift2TemplateUITests;
-			productReference = 8DC3C5CB1D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -373,14 +290,6 @@
 					8DC3C5AB1D901AB50012AFF7 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 4F55VCB57F;
-					};
-					8DC3C5BF1D901AB60012AFF7 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 8DC3C5AB1D901AB50012AFF7;
-					};
-					8DC3C5CA1D901AB60012AFF7 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 8DC3C5AB1D901AB50012AFF7;
 					};
 				};
 			};
@@ -398,8 +307,6 @@
 			projectRoot = "";
 			targets = (
 				8DC3C5AB1D901AB50012AFF7 /* SingleViewAppSwift2Template */,
-				8DC3C5BF1D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests */,
-				8DC3C5CA1D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -415,38 +322,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8DC3C5BE1D901AB60012AFF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8DC3C5C91D901AB60012AFF7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		291E3F290450FA6C4ECDBD27 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleViewAppSwift2TemplateTests/Pods-SingleViewAppSwift2TemplateTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4D8FA69DED6490CC291087F7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,24 +338,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleViewAppSwift2Template/Pods-SingleViewAppSwift2Template-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		684E5AC24F0DA941550EC3DF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SingleViewAppSwift2TemplateUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8F80CADEF0E67DF1429CEC07 /* [CP] Check Pods Manifest.lock */ = {
@@ -498,21 +358,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9BA02B64B0DF67DB646E3262 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleViewAppSwift2TemplateUITests/Pods-SingleViewAppSwift2TemplateUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A21061B709FA21C50BA50BC2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -529,54 +374,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleViewAppSwift2Template/Pods-SingleViewAppSwift2Template-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A2DFA9550E1D1946154D1278 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleViewAppSwift2TemplateUITests/Pods-SingleViewAppSwift2TemplateUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D8A930A991ED0D8E7C5E41E5 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SingleViewAppSwift2TemplateTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E30A8BC1BBB085C83739685A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SingleViewAppSwift2TemplateTests/Pods-SingleViewAppSwift2TemplateTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -613,36 +410,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8DC3C5BC1D901AB60012AFF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8DC3C5C51D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8DC3C5C71D901AB60012AFF7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8DC3C5D01D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8DC3C5C21D901AB60012AFF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8DC3C5AB1D901AB50012AFF7 /* SingleViewAppSwift2Template */;
-			targetProxy = 8DC3C5C11D901AB60012AFF7 /* PBXContainerItemProxy */;
-		};
-		8DC3C5CD1D901AB60012AFF7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8DC3C5AB1D901AB50012AFF7 /* SingleViewAppSwift2Template */;
-			targetProxy = 8DC3C5CC1D901AB60012AFF7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8DC3C5B31D901AB50012AFF7 /* Main.storyboard */ = {
@@ -796,56 +564,6 @@
 			};
 			name = Release;
 		};
-		8DC3C5D81D901AB60012AFF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E989A68500FDD7D7B133D42C /* Pods-SingleViewAppSwift2TemplateTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = SingleViewAppSwift2TemplateTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.SingleViewAppSwift2TemplateTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleViewAppSwift2Template.app/SingleViewAppSwift2Template";
-			};
-			name = Debug;
-		};
-		8DC3C5D91D901AB60012AFF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA89F4EA3A1C845F284146D0 /* Pods-SingleViewAppSwift2TemplateTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = SingleViewAppSwift2TemplateTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.SingleViewAppSwift2TemplateTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleViewAppSwift2Template.app/SingleViewAppSwift2Template";
-			};
-			name = Release;
-		};
-		8DC3C5DB1D901AB60012AFF7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B04E753A8ECFDF76F4342FCA /* Pods-SingleViewAppSwift2TemplateUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = SingleViewAppSwift2TemplateUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.SingleViewAppSwift2TemplateUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = SingleViewAppSwift2Template;
-			};
-			name = Debug;
-		};
-		8DC3C5DC1D901AB60012AFF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C78FC925C668B0881A686867 /* Pods-SingleViewAppSwift2TemplateUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = SingleViewAppSwift2TemplateUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.SingleViewAppSwift2TemplateUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = SingleViewAppSwift2Template;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -863,24 +581,6 @@
 			buildConfigurations = (
 				8DC3C5D51D901AB60012AFF7 /* Debug */,
 				8DC3C5D61D901AB60012AFF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8DC3C5D71D901AB60012AFF7 /* Build configuration list for PBXNativeTarget "SingleViewAppSwift2TemplateTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8DC3C5D81D901AB60012AFF7 /* Debug */,
-				8DC3C5D91D901AB60012AFF7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8DC3C5DA1D901AB60012AFF7 /* Build configuration list for PBXNativeTarget "SingleViewAppSwift2TemplateUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8DC3C5DB1D901AB60012AFF7 /* Debug */,
-				8DC3C5DC1D901AB60012AFF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

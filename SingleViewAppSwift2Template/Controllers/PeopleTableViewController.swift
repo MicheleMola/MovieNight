@@ -14,7 +14,8 @@ class PeopleTableViewController: UITableViewController {
     static let PersonCellHeight: CGFloat = 80
   }
   
-  private let limit = 5
+  private let peopleLimit = 5
+  private let numbersOfPeopleForPage = 20
   
   lazy var dataSource: PeopleListDataSource = {
     return PeopleListDataSource(people: [])
@@ -30,12 +31,22 @@ class PeopleTableViewController: UITableViewController {
   
   var watcher: Watcher?
   
+  let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     tableView.dataSource = dataSource
     
     getPeople(fromPage: 1)
+    
+    initActivityIndicator()
+  }
+  
+  func initActivityIndicator() {
+    spinner.color = UIColor.darkGray
+    spinner.hidesWhenStopped = true
+    tableView.tableFooterView = spinner
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,7 +65,9 @@ class PeopleTableViewController: UITableViewController {
   }
   
   func getPeople(fromPage page: Int) {
+    spinner.startAnimating()
     client.getPeople(fromPage: page) { response in
+      self.spinner.stopAnimating()
       switch response {
       case .success(let people):
         guard let people = people else { return }
@@ -90,7 +103,7 @@ class PeopleTableViewController: UITableViewController {
         
         dataSource.deselectPerson(at: indexPath)
         
-      } else {
+      } else if cell.accessoryType == .none && selectedPeople.count < peopleLimit {
         cell.accessoryType = .checkmark
         
         let selectedPerson = dataSource.person(at: indexPath)
@@ -101,15 +114,10 @@ class PeopleTableViewController: UITableViewController {
     }
   }
   
-  override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-    if selectedPeople.count == limit { return nil }
-    return indexPath
-  }
-  
   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     if indexPath.row == people.count - 1 {
       if people.count < totalPeople {
-        let page = ((indexPath.row + 1) / 20) + 1
+        let page = ((indexPath.row + 1) / numbersOfPeopleForPage) + 1
         self.getPeople(fromPage: page)
       }
     }

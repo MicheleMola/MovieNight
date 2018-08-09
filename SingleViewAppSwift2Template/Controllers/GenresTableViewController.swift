@@ -14,7 +14,7 @@ class GenresTableViewController: UITableViewController {
     static let GenreCellHeight: CGFloat = 60
   }
   
-  private let limit = 5
+  private let genresLimit = 5
   
   lazy var dataSource: GenresListDataSource = {
     return GenresListDataSource(genres: [])
@@ -85,7 +85,7 @@ class GenresTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-    if selectedGenres.count == limit { return nil }
+    if selectedGenres.count == genresLimit { return nil }
     return indexPath
   }
   

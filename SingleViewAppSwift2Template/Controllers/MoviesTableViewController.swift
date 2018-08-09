@@ -14,7 +14,7 @@ class MoviesTableViewController: UITableViewController {
     static let MovieCellHeight: CGFloat = 80
   }
   
-  private let limit = 5
+  private let numbersOfPeopleForPage = 20
   
   lazy var dataSource: MoviesListDataSource = {
     return MoviesListDataSource(movies: [])
@@ -30,12 +30,22 @@ class MoviesTableViewController: UITableViewController {
   
   let client = MovieDBAPIClient()
   
+  let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
     tableView.dataSource = dataSource
     
     setupView(withPage: 1)
+    
+    initActivityIndicator()
+  }
+  
+  func initActivityIndicator() {
+    spinner.color = UIColor.darkGray
+    spinner.hidesWhenStopped = true
+    tableView.tableFooterView = spinner
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,7 +76,9 @@ class MoviesTableViewController: UITableViewController {
   }
   
   func getMovies(fromPage page: Int, peopleIds: String, genresIds: String, avgVote: String) {
+    spinner.startAnimating()
     client.getMovies(fromPage: page, peopleIds: peopleIds, genresIds: genresIds, avgVote: avgVote) { [unowned self] response in
+      self.spinner.stopAnimating()
       switch response {
       case .success(let movies):
         guard let movies = movies else { return }
@@ -95,7 +107,7 @@ class MoviesTableViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     if indexPath.row == movies.count - 1 {
       if movies.count < totalPeople {
-        let page = ((indexPath.row + 1) / 20) + 1
+        let page = ((indexPath.row + 1) / numbersOfPeopleForPage) + 1
         self.setupView(withPage: page)
       }
     }
