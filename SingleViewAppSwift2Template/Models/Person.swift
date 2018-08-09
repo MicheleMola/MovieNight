@@ -12,11 +12,12 @@ struct Person: Codable {
   let id: Int
   let name: String
   let profile_path: String?
+  var isSelected: Bool? = false
 }
 
 extension Person: Equatable {
   static func ==(lhs: Person, rhs: Person) -> Bool {
-    return lhs.id == rhs.id && lhs.name == rhs.name
+    return lhs.id == rhs.id
   }
 }
 

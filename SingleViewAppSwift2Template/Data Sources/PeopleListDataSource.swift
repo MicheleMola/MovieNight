@@ -11,13 +11,9 @@ import UIKit
 class PeopleListDataSource: NSObject, UITableViewDataSource {
   
   private var people: [Person]
-  
-  let tableView: UITableView
-  
-  init(people: [Person], tableView: UITableView) {
+    
+  init(people: [Person]) {
     self.people = people
-    self.tableView = tableView
-    super.init()
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -28,7 +24,7 @@ class PeopleListDataSource: NSObject, UITableViewDataSource {
     let personCell = tableView.dequeueReusableCell(withIdentifier: PersonCell.reuseIdentifier, for: indexPath) as! PersonCell
     
     let person = people[indexPath.row]
-    
+   
     personCell.configure(with: person)
     
     return personCell
@@ -39,12 +35,19 @@ class PeopleListDataSource: NSObject, UITableViewDataSource {
   }
   
   func update(with people: [Person]) {
-    self.people = people
+    self.people.append(contentsOf: people)
   }
   
   func person(at indexPath: IndexPath) -> Person {
     return people[indexPath.row]
   }
 
+  func selectPerson(at indexPath: IndexPath) {
+    people[indexPath.row].isSelected = true
+  }
+  
+  func deselectPerson(at indexPath: IndexPath) {
+    people[indexPath.row].isSelected = false
+  }
   
 }

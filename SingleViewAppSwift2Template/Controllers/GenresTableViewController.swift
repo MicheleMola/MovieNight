@@ -63,7 +63,7 @@ class GenresTableViewController: UITableViewController {
         guard let genres = genres?.genres else { return }
         self.genres = genres
       case .failure(let error):
-        print(error)
+        self.alertController(message: error.rawValue)
       }
     }
   }

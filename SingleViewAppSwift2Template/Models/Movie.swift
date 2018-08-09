@@ -13,6 +13,9 @@ struct Movie: Codable {
   let release_date: String
   let overview: String
   let poster_path: String?
+  let backdrop_path: String?
+  let vote_average: Double
+  let adult: Bool
 }
 
 struct Movies: Codable {

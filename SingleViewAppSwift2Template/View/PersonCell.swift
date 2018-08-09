@@ -30,18 +30,19 @@ class PersonCell: UITableViewCell {
     super.init(coder: aDecoder)
   }
   
-  override func setSelected(_ selected: Bool, animated: Bool) {
-    super.setSelected(selected, animated: animated)
-    
-    self.accessoryType = selected ? .checkmark : .none
-  }
-  
   func configure(with person: Person) {
     self.nameLabel.text = person.name
   
     guard let profilePath = person.profile_path else { return }
     let url = URL(string: "https://image.tmdb.org/t/p/w200/\(profilePath)")
-    self.imageProfile.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "Fill 27"))
+    self.imageProfile.kf.setImage(with: url, placeholder: #imageLiteral(resourceName: "placeholder"))
+    
+    if let isSelected = person.isSelected {
+      self.accessoryType = isSelected ? .checkmark : .none
+    } else {
+      self.accessoryType = .none
+    }
+    
   }
   
 }

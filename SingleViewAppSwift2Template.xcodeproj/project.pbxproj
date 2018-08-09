@@ -16,6 +16,7 @@
 		8DC3C5BA1D901AB50012AFF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DC3C5B81D901AB50012AFF7 /* LaunchScreen.storyboard */; };
 		8DC3C5C51D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3C5C41D901AB60012AFF7 /* SingleViewAppSwift2TemplateTests.swift */; };
 		8DC3C5D01D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC3C5CF1D901AB60012AFF7 /* SingleViewAppSwift2TemplateUITests.swift */; };
+		DE3B5BA6211C533F009EB158 /* MovieDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B5BA5211C533F009EB158 /* MovieDetailTableViewController.swift */; };
 		DE6FC949210B3AEC00E0E79F /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6FC948210B3AEC00E0E79F /* Button.swift */; };
 		DE701EB92112F1960076B354 /* Watcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE701EB82112F1960076B354 /* Watcher.swift */; };
 		DE701EBB211302C40076B354 /* VoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE701EBA211302C40076B354 /* VoteTableViewController.swift */; };
@@ -36,6 +37,7 @@
 		DEDFDD7B210C8D200016B7D3 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFDD7A210C8D200016B7D3 /* APIClient.swift */; };
 		DEDFDD7D210C8D3C0016B7D3 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFDD7C210C8D3C0016B7D3 /* APIError.swift */; };
 		DEDFDD7F210C8DAD0016B7D3 /* MovieDBAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDFDD7E210C8DAD0016B7D3 /* MovieDBAPIClient.swift */; };
+		DEE095DD211C88A300ACA7DF /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE095DC211C88A300ACA7DF /* UIViewController+Alert.swift */; };
 		FEAE02DDA931522B4FA6667B /* Pods_SingleViewAppSwift2TemplateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB540D96874A2D8BCFFF26B /* Pods_SingleViewAppSwift2TemplateTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,7 @@
 		C78FC925C668B0881A686867 /* Pods-SingleViewAppSwift2TemplateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleViewAppSwift2TemplateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleViewAppSwift2TemplateUITests/Pods-SingleViewAppSwift2TemplateUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CEE6574F4EA8684C81E8B369 /* Pods_SingleViewAppSwift2TemplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SingleViewAppSwift2TemplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA89F4EA3A1C845F284146D0 /* Pods-SingleViewAppSwift2TemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleViewAppSwift2TemplateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SingleViewAppSwift2TemplateTests/Pods-SingleViewAppSwift2TemplateTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE3B5BA5211C533F009EB158 /* MovieDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableViewController.swift; sourceTree = "<group>"; };
 		DE6FC948210B3AEC00E0E79F /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		DE701EB82112F1960076B354 /* Watcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watcher.swift; sourceTree = "<group>"; };
 		DE701EBA211302C40076B354 /* VoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTableViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		DEDFDD7A210C8D200016B7D3 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		DEDFDD7C210C8D3C0016B7D3 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		DEDFDD7E210C8DAD0016B7D3 /* MovieDBAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDBAPIClient.swift; sourceTree = "<group>"; };
+		DEE095DC211C88A300ACA7DF /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		E989A68500FDD7D7B133D42C /* Pods-SingleViewAppSwift2TemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SingleViewAppSwift2TemplateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SingleViewAppSwift2TemplateTests/Pods-SingleViewAppSwift2TemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +181,7 @@
 		8DC3C5AE1D901AB50012AFF7 /* SingleViewAppSwift2Template */ = {
 			isa = PBXGroup;
 			children = (
+				DEE095DE211C8A5800ACA7DF /* UI */,
 				DEDFDD77210C79C90016B7D3 /* Networking */,
 				DEDFDD6E210C69650016B7D3 /* View */,
 				DEDFDD6B210C67F40016B7D3 /* Data Sources */,
@@ -214,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				DE6FC948210B3AEC00E0E79F /* Button.swift */,
+				DEE095DC211C88A300ACA7DF /* UIViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +232,7 @@
 				DECA6B71210CC09200A9540D /* PeopleTableViewController.swift */,
 				DE701EBA211302C40076B354 /* VoteTableViewController.swift */,
 				DEA849252115F96300722E20 /* MoviesTableViewController.swift */,
+				DE3B5BA5211C533F009EB158 /* MovieDetailTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +286,13 @@
 				DEDFDD7E210C8DAD0016B7D3 /* MovieDBAPIClient.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		DEE095DE211C8A5800ACA7DF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -585,7 +599,9 @@
 				DEDFDD7B210C8D200016B7D3 /* APIClient.swift in Sources */,
 				DECA6B76210CC91700A9540D /* Person.swift in Sources */,
 				DEDFDD7F210C8DAD0016B7D3 /* MovieDBAPIClient.swift in Sources */,
+				DE3B5BA6211C533F009EB158 /* MovieDetailTableViewController.swift in Sources */,
 				DEDFDD66210C62B40016B7D3 /* GenresTableViewController.swift in Sources */,
+				DEE095DD211C88A300ACA7DF /* UIViewController+Alert.swift in Sources */,
 				DECA6B74210CC6BD00A9540D /* PeopleListDataSource.swift in Sources */,
 				DEDFDD79210C7A660016B7D3 /* Response.swift in Sources */,
 				DECA6B78210CCA8600A9540D /* PersonCell.swift in Sources */,

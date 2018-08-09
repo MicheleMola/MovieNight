@@ -17,15 +17,10 @@ class PeopleTableViewController: UITableViewController {
   private let limit = 5
   
   lazy var dataSource: PeopleListDataSource = {
-    return PeopleListDataSource(people: [], tableView: self.tableView)
+    return PeopleListDataSource(people: [])
   }()
   
-  var people: [Person] = [] {
-    didSet {
-      self.dataSource.update(with: people)
-      self.tableView.reloadData()
-    }
-  }
+  var people: [Person] = []
   
   let client = MovieDBAPIClient()
   
@@ -64,11 +59,17 @@ class PeopleTableViewController: UITableViewController {
       case .success(let people):
         guard let people = people else { return }
         self.people.append(contentsOf: people.results)
+        self.updateDataSource(withPeople: people.results)
         self.totalPeople = people.total_results
       case .failure(let error):
-        print(error)
+        self.alertController(message: error.rawValue)
       }
     }
+  }
+  
+  func updateDataSource(withPeople people: [Person]) {
+    self.dataSource.update(with: people)
+    self.tableView.reloadData()
   }
   
   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -76,14 +77,27 @@ class PeopleTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let selectedPerson = dataSource.person(at: indexPath)
-    selectedPeople.append(selectedPerson)
-  }
-  
-  override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-    let deselectedPerson = dataSource.person(at: indexPath)
-    if let indexOf = selectedPeople.index(of: deselectedPerson) {
-      selectedPeople.remove(at: indexOf)
+    tableView.deselectRow(at: indexPath, animated: true)
+    
+    if let cell = tableView.cellForRow(at: indexPath as IndexPath) {
+      if cell.accessoryType == .checkmark {
+        cell.accessoryType = .none
+        
+        let deselectedPerson = dataSource.person(at: indexPath)
+        if let indexOf = selectedPeople.index(of: deselectedPerson) {
+          selectedPeople.remove(at: indexOf)
+        }
+        
+        dataSource.deselectPerson(at: indexPath)
+        
+      } else {
+        cell.accessoryType = .checkmark
+        
+        let selectedPerson = dataSource.person(at: indexPath)
+        selectedPeople.append(selectedPerson)
+        
+        dataSource.selectPerson(at: indexPath)
+      }
     }
   }
   

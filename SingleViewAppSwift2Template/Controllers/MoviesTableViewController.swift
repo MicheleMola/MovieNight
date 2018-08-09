@@ -38,6 +38,15 @@ class MoviesTableViewController: UITableViewController {
     setupView(withPage: 1)
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showMovieDetail" {
+      if let indexPath = self.tableView.indexPathForSelectedRow {
+        let movieDetailTVC = segue.destination as! MovieDetailTableViewController
+        movieDetailTVC.movie = movies[indexPath.row]
+      }
+    }
+  }
+  
   func setupView(withPage page: Int) {
     if let watcherOne = getWatcher(withKey: "watcher0"), let watcherTwo = getWatcher(withKey: "watcher1") {
       let genresIdsWatcherOne = watcherOne.genres.map { "\($0.id)" }
@@ -57,14 +66,14 @@ class MoviesTableViewController: UITableViewController {
   }
   
   func getMovies(fromPage page: Int, peopleIds: String, genresIds: String, avgVote: String) {
-    client.getMovies(fromPage: page, peopleIds: peopleIds, genresIds: genresIds, avgVote: avgVote) { response in
+    client.getMovies(fromPage: page, peopleIds: peopleIds, genresIds: genresIds, avgVote: avgVote) { [unowned self] response in
       switch response {
       case .success(let movies):
         guard let movies = movies else { return }
         self.movies.append(contentsOf: movies.results)
         self.totalPeople = movies.total_results
       case .failure(let error):
-        print(error)
+        self.alertController(message: error.rawValue)
       }
     }
   }
